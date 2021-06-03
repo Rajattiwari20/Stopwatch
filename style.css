@@ -1,0 +1,178 @@
+.stopWatchBody{
+    width: 300px;
+    height: 300px;
+    /* margin: 100px; */
+    margin-left: 35%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: rotateX(-25deg)  ;
+
+}
+
+/* common styling for all 4 faces of stopWatch */
+.face{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+/* this is diplay screen that's why color is white */
+.one{
+    background-color: whitesmoke;
+    transform: rotateY(180deg) translateZ(-300px) ;  
+}
+
+/* rest all 3 faces color is black */
+.two{
+    background-color: black;
+    transform: rotateY(90deg) translateZ(-150px) translateX(-150px);  
+}
+
+.three{
+    background-color: black  
+}
+
+.four{
+    background-color: black;
+    transform: rotateY(90deg) translateZ(150px) translateX(-150px);
+}
+
+.stop-btn{
+    width: 70%;
+    height: 30%;
+    position: absolute;
+    left: 38%;
+    top: 30%;   
+    font-size: 1.8rem;
+    color: white;
+    font-family: sans-serif;
+    background-color: rgb(255, 0, 0); 
+    outline: none; 
+    border-radius: 15px;
+    box-shadow: 0px 8px 0px  #942020 , 0px 8px 20px #222222;
+    transition: all .5s ease; 
+    
+}
+
+.stop-btn:active{
+    box-shadow: none;
+    bottom: 2px;
+}
+
+/* common rotate class for start-and-reset-container and timer-container so that the display will not apper in opposite direction  */
+.rotate{
+    transform: rotateY(-180deg);
+}
+
+.timer-container{
+    position: absolute;
+    left: 25%;
+    top: 20%;
+    color: black;
+    font-size: 2.5rem;
+}
+
+.start-and-reset-container{
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.start-and-reset-container h1{
+   font-size: 20px;
+   padding: 2%;
+   text-align: center;
+}
+
+.start-container{
+    border: 2px solid lightgreen;
+    background-color: lightgreen;
+    box-shadow: 0px 4px 0px  #3cb938 , 0px 8px 20px #222222;
+    color: white;
+    font-family: sans-serif;
+    transition: all .5s ease; 
+    
+}
+
+.reset-container{
+    margin-top: 10%;
+    border: 2px solid rgb(146, 144, 238);
+    background-color: rgb(146, 144, 238);
+    box-shadow: 0px 4px 0px  #91a1fb , 0px 8px 20px #222222;
+    color: white;
+    font-family: sans-serif;
+    transition: all .5s ease; 
+}
+
+.start-container:active{
+    box-shadow: none;
+    bottom: 2px;
+}
+
+.reset-container:active{
+    box-shadow: none;
+    bottom: 2px;
+}
+
+/*********************************MEDIA QUERIES*****************************************/
+
+/* media query for width less than 700px  */
+@media (max-width :700px){
+
+    .stopWatchBody{
+        
+        margin-left: 0%;
+        
+    
+    }
+}
+
+/* media query for width less than 460px  */
+@media (max-width :460px){
+
+    
+    .stopWatchBody{
+        width: 200px;
+        height: 200px;
+    }
+
+    .one{
+        background-color: whitesmoke;
+        transform: rotateY(180deg) translateZ(-200px) ;  
+    }
+    
+    .two{
+        background-color: black;
+        transform: rotateY(90deg) translateZ(-100px) translateX(-100px);  
+    }
+    
+    .three{
+        background-color: black  
+    }
+    
+    .four{
+        background-color: black;
+        transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+    }
+
+    .start-and-reset-container{
+        width: 50%;
+        height: 10%;   
+    }
+    
+    .start-and-reset-container h1{
+       font-size: 10px;
+    }
+    
+    .timer-container{
+        font-size: 2rem;
+    }
+}

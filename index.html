@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- main stop watch body  -->
+    <div class = stopWatchBody>
+        <!-- this is display screen -->
+        <div class="face one">
+            <div class="timer-container rotate" id="timer">
+                00:00:00
+            </div>
+            <div class="start-and-reset-container rotate" id="startAndReset">
+                <div class="start-container" id="start"><h1>START</h1></div>
+                <div class="reset-container" id="reset"><h1>RESET</h1></div>
+            </div> 
+        </div>
+        <!-- other faces of timer for 3d look -->
+        <div class="face two"></div>
+        <div class="face three"></div>
+        <div class="face four"></div>
+        <!-- stop button will apper at the top of face 3 -->
+        <button class="stop-btn" id="stop">STOP</button>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
